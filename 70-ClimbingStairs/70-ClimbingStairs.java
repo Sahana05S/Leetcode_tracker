@@ -1,0 +1,13 @@
+// Last updated: 2/26/2026, 9:57:25 AM
+class Solution {
+    public int climbStairs(int n) {
+        if (n == 1) return 1;
+        int first = 1, second = 2;
+        for (int i = 3; i <= n; i++) {
+            int third = first + second;
+            first = second;
+            second = third;
+        }
+        return second;
+    }
+}
